@@ -1,4 +1,4 @@
-\# ms-gamingoverlay Fix
+# ms-gamingoverlay Fix
 
 
 
@@ -10,7 +10,7 @@ A simple Windows fix for the following popup after removing Xbox Game Bar:
 
 
 
-\## Problem
+## Problem
 
 Some games, shortcuts, or Windows components still try to open the `ms-gamingoverlay` protocol even after Xbox Game Bar has been removed.
 
@@ -20,7 +20,7 @@ Because the app is no longer installed, Windows shows a popup asking you to choo
 
 
 
-\## Solution
+## Solution
 
 This project registers a silent local handler for `ms-gamingoverlay` so the popup does not appear anymore.
 
@@ -30,21 +30,21 @@ It also disables Game DVR related settings and restarts Windows Explorer so the 
 
 
 
-\## Files
+## Files
 
-\- `fix-ms-gamingoverlay.bat`  
+- `fix-ms-gamingoverlay.bat`  
 
 &nbsp; Installs the fix, creates the helper VBS file, updates the registry, and restarts Explorer.
 
 
 
-\- `revert-ms-gamingoverlay.bat`  
+- `revert-ms-gamingoverlay.bat`  
 
 &nbsp; Removes the fix and deletes the helper file.
 
 
 
-\## Helper file path
+## Helper file path
 
 The fix creates this file:
 
@@ -62,47 +62,48 @@ This path is used because it is stable and does not depend on a specific usernam
 
 
 
-\## How to use
+## How to use
 
 
 
-1\. Right click `fix-ms-gamingoverlay.bat`
+1. Right click `fix-ms-gamingoverlay.bat`
 
-2\. Choose \*\*Run as administrator\*\*
+2. Choose \*\*Run as administrator\*\*
 
-3\. Wait for completion
-
-
-
-\## Revert
+3. Wait for completion
 
 
 
-1\. Right click `revert-ms-gamingoverlay.bat`
-
-2\. Choose \*\*Run as administrator\*\*
+## Revert
 
 
 
-\## Notes
+1. Right click `revert-ms-gamingoverlay.bat`
+
+2. Choose **Run as administrator**
 
 
 
-This does \*\*not\*\* reinstall Xbox Game Bar.
+## Notes
+
+
+
+This does **not** reinstall Xbox Game Bar.
 
 It only suppresses the popup by redirecting the protocol to a harmless local script.
 
 
 
-\## Screenshot
+## Screenshot
 
 
 
-!\[ms-gamingoverlay error](images/ms-gamingoverlay-error.png)
+![ms-gamingoverlay error](images/ms-gamingoverlay-error.png)
 
 
 
 This is the popup shown by Windows after Xbox Game Bar is removed while the `ms-gamingoverlay` protocol is still being called by the system or a game.
+
 
 
 
